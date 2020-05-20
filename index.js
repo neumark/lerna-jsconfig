@@ -4,7 +4,7 @@ const path = require('path');
 const {execSync} = require('child_process');
 const findUp = require('find-up');
 
-const lernaPkgList = String(execSync('lerna list --json'));
+const lernaPkgList = String(execSync('lerna list -a --json'));
 const pkgListJson = JSON.parse(lernaPkgList);
 
 const lernaFilePath = findUp.sync('lerna.json');
